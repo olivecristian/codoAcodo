@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const campoMensaje = document.getElementById("mensaje");
   const errorMensaje = document.getElementById("mensajeError");
   
-<<<<<<< HEAD
     // Verificar que los elementos del menú existen antes de agregar event listeners
     if (menuToggle && navLinks) {
       menuToggle.('click', function(event) {
@@ -84,26 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function validarNombre(nombre) {
     const regex = /^[a-zA-Z\s]+$/;
     return regex.test(nombre);
-=======
-  // Obtener referencias a los elementos del menú de navegación
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.navbar nav ul');
-
-  // Verificar que los elementos del menú existen antes de agregar event listeners
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', function(event) {
-      event.stopPropagation();
-      navLinks.classList.toggle('active');
-      menuToggle.style.display = navLinks.classList.contains('active') ? 'none' : '';
-    });
-
-    document.addEventListener('click', function(event) {
-      if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
-        navLinks.classList.remove('active');
-        menuToggle.style.display = '';
-      }
-    });
->>>>>>> 521f45469e25c4523a3d42f3fe47ad03d5c8574e
   }
 
   // Verificar que los elementos del formulario existen antes de agregar event listeners
